@@ -46,19 +46,21 @@ SettingEnable = Settings.user.bool({
 	end,
 })
 
+local function reloadVCLib()
+	if vcIsOpened() then
+		vcClose()
+	end
+	if SettingEnable then
+		vcOpen()
+	end
+end
+
 Settings.user.action({
 	autoRegister = true,
 	order = 1,
 	id = "reload",
 	name = "VCLib reload",
-	action = function()
-		if vcIsOpened() then
-			vcClose()
-		end
-		if SettingEnable then
-			vcOpen()
-		end
-	end,
+	action = reloadVCLib,
 })
 
 NecroVC.MicrophoneOption = Enum.sequence({
@@ -178,6 +180,8 @@ local function handleVoiceData(data)
 	GameClient.sendReliable(NecroVC.Netplay_MessageType_VoiceData, packVoiceDataMessage(data, 1), Netplay.Channel.CHAT)
 end
 
+event.contentLoad.add("reloadVCLib", "dlc", reloadVCLib)
+
 event.tick.add("handleVoiceInputs", "input", function()
 	if checkVoiceInputActivity() then
 		for _ = 1, 100 do
@@ -212,7 +216,7 @@ event.serverMessage.add("broadcastVoiceData", NecroVC.Netplay_MessageType_VoiceD
 end)
 
 event.clientMessage.add("receiveVoiceData", NecroVC.Netplay_MessageType_VoiceData, function(message)
-	vcPull(message[VoiceDataMessage_data])
+	vcPush(message[VoiceDataMessage_data])
 end)
 
 microphoneHotkeyActivated, microphoneHotkeyDown = script.persist(function()
