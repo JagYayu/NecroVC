@@ -1,0 +1,4 @@
+﻿.ignore/
+Bin/
+Build/
+.clangd

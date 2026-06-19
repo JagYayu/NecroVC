@@ -1,0 +1,30 @@
+﻿#include <winver.h>
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     0,1,0,0
+PRODUCTVERSION  0,1,0,0
+FILEFLAGSMASK   0x3fL
+FILEFLAGS       0x0L
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_DLL
+FILESUBTYPE     0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "JagYayu"
+            VALUE "FileDescription", "Voice Chat Support for Crypt of the Necrodancer: Synchrony"
+            VALUE "FileVersion", "0.1.0.0"
+            VALUE "InternalName", "NecroVC.dll"
+            VALUE "LegalCopyright", "Copyright (C) 2026 JagYayu"
+            VALUE "OriginalFilename", "NecroVC.dll"
+            VALUE "ProductName", "NecroVC"
+            VALUE "ProductVersion", "0.1.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

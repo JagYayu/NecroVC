@@ -1,0 +1,6 @@
+[submodule "Thirdparty/opus"]
+	path = Thirdparty/opus
+	url = https://github.com/xiph/opus.git
+[submodule "Thirdparty/miniaudio"]
+	path = Thirdparty/miniaudio
+	url = https://github.com/mackron/miniaudio.git

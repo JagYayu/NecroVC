@@ -1,0 +1,24 @@
+{
+	"cmake.buildDirectory": "${workspaceFolder}/Build",
+	"cmake.configureArgs": [
+		"-DCMAKE_EXPORT_COMPILE_COMMANDS=1",
+	],
+	"cSpell.words": [
+		"checklstring",
+		"endforeach",
+		"endmacro",
+		"implib",
+		"INTERPROCEDURAL",
+		"MINSIZEREL",
+		"NecroVC",
+		"pushfstring",
+		"pushlstring",
+		"RELWITHDEBINFO",
+		"SOVERSION",
+		"STREQUAL",
+		"Thirdparty",
+		"Wextra",
+		"Wpedantic",
+		"Wshadow"
+	]
+}

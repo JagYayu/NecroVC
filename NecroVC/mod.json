@@ -1,0 +1,20 @@
+{
+	"namespace": "NecroVC",
+	"displayName": "Voice Chat Support",
+	"version": "1",
+	"synchronyVersion": "4.2.1",
+	"description": "Add in-game voice chat support. (private testing)",
+	"author": "JagYayu☣",
+	"dependencies": {},
+	"api": {"scriptPath":""},
+	"icon": "NecroVCIcon.png",
+	"banner": "NecroVCBanner.png",
+	"tags": [],
+	"name": "NecroVC_io_6149364",
+	"changelog": "",
+	"homepageURL": "https://mod.io/g/crypt/m/necrovc",
+	"modioID": "6149364",
+	"modioUserID": 13661250,
+	"pendingVersion": "1",
+	"visibility": 0
+}

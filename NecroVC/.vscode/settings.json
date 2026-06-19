@@ -1,0 +1,12 @@
+{
+	"Lua.workspace.library": [
+		"C:\\Users\\15162\\AppData\\Local\\NecroDancer\\dump\\scripts"
+	],
+	"cSpell.words": [
+		"Necro"
+	],
+	"Lua.diagnostics.globals": [
+		"log",
+		"script"
+	]
+}
