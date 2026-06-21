@@ -3,7 +3,10 @@
 		"C:\\Users\\15162\\AppData\\Local\\NecroDancer\\dump\\scripts"
 	],
 	"cSpell.words": [
-		"Necro"
+		"deinit",
+		"Inited",
+		"Necro",
+		"VCAPI"
 	],
 	"Lua.diagnostics.globals": [
 		"log",

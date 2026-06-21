@@ -4,3 +4,6 @@
 [submodule "Thirdparty/miniaudio"]
 	path = Thirdparty/miniaudio
 	url = https://github.com/mackron/miniaudio.git
+[submodule "Thirdparty/uthash"]
+	path = Thirdparty/uthash
+	url = https://github.com/troydhanson/uthash.git

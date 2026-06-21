@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.28)
 
 project(NecroVC
-    VERSION 0.1.0.0 # 同步更改 version.rc
+    VERSION 0.2.0.0 # 同步更改 version.rc
     LANGUAGES C CXX
     DESCRIPTION "Voice Chat Support for Crypt of the Necrodancer: Synchrony"
 )
@@ -54,6 +54,13 @@ add_custom_command(
     COMMAND ${CMAKE_COMMAND} -E echo "lua_pushlstring" >> "${LUA51_DEF_GEN}"
     COMMAND ${CMAKE_COMMAND} -E echo "lua_createtable" >> "${LUA51_DEF_GEN}"
     COMMAND ${CMAKE_COMMAND} -E echo "luaL_checklstring" >> "${LUA51_DEF_GEN}"
+    COMMAND ${CMAKE_COMMAND} -E echo "lua_isnumber" >> "${LUA51_DEF_GEN}"
+    COMMAND ${CMAKE_COMMAND} -E echo "lua_gettop" >> "${LUA51_DEF_GEN}"
+    COMMAND ${CMAKE_COMMAND} -E echo "lua_replace" >> "${LUA51_DEF_GEN}"
+    COMMAND ${CMAKE_COMMAND} -E echo "lua_pushvalue" >> "${LUA51_DEF_GEN}"
+    COMMAND ${CMAKE_COMMAND} -E echo "luaL_error" >> "${LUA51_DEF_GEN}"
+    COMMAND ${CMAKE_COMMAND} -E echo "luaL_checknumber" >> "${LUA51_DEF_GEN}"
+    COMMAND ${CMAKE_COMMAND} -E echo "lua_pushnumber" >> "${LUA51_DEF_GEN}"
     # 追加用到的函数 TODO 移除不用的
     COMMAND lib /def:"${LUA51_DEF_GEN}" /out:"${LUA51_LIB_GEN}" /machine:${LIB_MACHINE}
     COMMENT "Generating import library from ${LUA51_DLL}"
@@ -90,7 +97,6 @@ endif()
 
 target_compile_definitions(NecroVC PRIVATE
     NECROVC_EXPORTS
-    MINIAUDIO_IMPLEMENTATION
 )
 
 target_link_libraries(NecroVC
@@ -113,4 +119,5 @@ target_include_directories(NecroVC PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/Thirdparty/opus/include"
     "${CMAKE_CURRENT_SOURCE_DIR}/Thirdparty/miniaudio"
     "${CMAKE_CURRENT_SOURCE_DIR}/Thirdparty/lua5.1.4"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Thirdparty/uthash/src"
 )
